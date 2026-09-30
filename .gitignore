@@ -32,15 +32,13 @@ __pycache__/
 *.npy
 *.npz
 
-# Share reviewed aggregate results, not row-level predictions or live runs
-/results/*
-!/results/*.csv
-!/results/baseline_design.json
-!/results/cost_summary.json
-!/results/final_validation.json
-!/results/integrity_checks.json
-!/results/environment_main.txt
-!/results/environment_qwen.txt
+# Publish selected results; retain full experiment artifacts locally
+/results/
+/figures/
+/ECB_CES_FINAL_REPORT.pdf
+/reports/*
+!/reports/KEY_RESULTS.md
+!/reports/key_results.csv
 /experiments/**/results/
 /experiments/**/model_manifest.json
 /experiments/**/environment_versions.json
@@ -52,7 +50,6 @@ __pycache__/
 /sources/ecb/*
 !/sources/ecb/download_links.json
 !/sources/source_checksums.json
-/reports/FINAL_REPORT_*.md
 /review-stage/
 /idea-stage/
 /refine-logs/

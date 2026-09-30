@@ -1,0 +1,15 @@
+experiment,target,method,training_n,evaluation_n,metric,value,unit
+history_comparison,c1120,deepseek_demo,0,660,mae,4.0622727272727275,percentage_points
+history_comparison,c3110,deepseek_demo,0,660,accuracy,0.44242424242424244,fraction
+history_comparison,c1120,deepseek_history,0,660,mae,2.7139393939393943,percentage_points
+history_comparison,c3110,deepseek_history,0,660,accuracy,0.6984848484848485,fraction
+history_comparison,c1120,history3,0,660,mae,2.4956060606060606,percentage_points
+history_comparison,c3110,history3,0,660,accuracy,0.7333333333333333,fraction
+history_comparison,c1120,hist_gradient_boosting,94850,660,mae,2.540253047014453,percentage_points
+history_comparison,c3110,hist_gradient_boosting,94850,660,accuracy,0.7545454545454545,fraction
+local_adaptation,c3110,qwen_base,0,660,accuracy,0.49393939393939396,fraction
+local_adaptation,c3110,qwen_hard,1024,660,accuracy,0.7287878787878788,fraction
+local_adaptation,c3110,qwen_soft,1024,660,accuracy,0.7136363636363636,fraction
+local_adaptation,c3110,history3,0,660,accuracy,0.7333333333333333,fraction
+local_adaptation,c3110,hgb_1024,1024,660,accuracy,0.703030303030303,fraction
+local_adaptation,c3110,hist_gradient_boosting,94850,660,accuracy,0.7545454545454545,fraction

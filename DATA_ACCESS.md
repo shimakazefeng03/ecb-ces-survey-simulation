@@ -1,14 +1,10 @@
 # 数据获取与本地复现
 
-本仓库不再分发 CES 逐人微观数据或模型权重。各协作者从官方渠道获取数据，并遵守官方用途说明。
+## CES 数据
 
-## CES
+从 [ECB 官方数据页面](https://www.ecb.europa.eu/stats/ecb_surveys/consumer_exp_survey/html/data_methodological.en.html)获取数据。项目保留了 [下载链接](sources/ecb/download_links.json) 和 [研究所用文件的校验记录](sources/source_checksums.json)，复现时记录所用数据版本及哈希。
 
-- 官方入口：https://www.ecb.europa.eu/stats/ecb_surveys/consumer_exp_survey/html/data_methodological.en.html
-- 已记录的下载链接：`sources/ecb/download_links.json`。
-- 已有研究使用的文件校验记录：`sources/source_checksums.json`。官方文件后续可能修订；重新下载得到的 hash 不一定与原实验相同，不应声称是原快照的完全复现。
-
-旧版研究预期 `data/raw/` 下有以下文件：
+已完成研究使用以下文件，放入 `data/raw/`：
 
 ```text
 ecb.CES_data_background.en.csv
@@ -16,14 +12,25 @@ ecb.CES_data_2025_monthly.en.csv
 ecb.CES_data_2026_monthly.en.csv
 ```
 
-下载这些官方文件并保留文件名后，按根目录 README 的顺序准备数据和运行。该步骤可能发起大量模型调用；查看各脚本和环境要求后再执行。
+## 运行入口
 
-MPS 后续实验的 `experiments/ces_mps/acquire_ces.py` 下载更多年份到独立目录，并优先复用本地已有的年度数据；当前版本仍要求上述背景文件已放在 `data/raw/`。宏观数据获取代码是 `experiments/ces_mps/acquire_macro.py`。这两个脚本处于后续实验开发流程内，状态与约定以 `experiments/ces_mps/PROTOCOL.md` 为准。
+主分析使用 Python 3.12，主要依赖为 pandas、NumPy、SciPy 和 scikit-learn。准备数据并运行传统基线：
 
-## 模型与凭据
+```sh
+python scripts/prepare_data.py
+python scripts/run_baselines.py
+```
 
-模型按其官方模型卡和许可自行下载，路径保留在本地。MPS 实验的模型和环境声明见 `experiments/ces_mps/env-spec.json`。
+API 实验入口为 `scripts/run_deepseek.py`；本地 Qwen 实验先运行 `scripts/prepare_qwen.py`，再运行 `scripts/run_qwen.py`，为 `--mode` 选择 `base`、`hard` 或 `soft`。Qwen 使用 MLX 0.32.2、MLX-LM 0.31.3 和本地 Qwen3.5-4B 8bit 权重，模型路径在 `run_qwen.py` 中配置。DeepSeek 凭据通过 macOS Keychain 服务 `deepseek-api-key` 读取。
 
-旧 API 实验通过 macOS Keychain 的 `deepseek-api-key` 服务读取凭据，不包含可共享密钥；本地 MPS 后续实验与该 API 路径分开。不要把密钥写入 Git、issue 或报告。
+分析入口为 `scripts/analyze.py` 和 `scripts/analyze_qwen.py`。生成的完整指标与日志保存在本地，精选结果整理至 `reports/`。
+
+## MPS 后续实验
+
+环境与模型配置见 [env-spec.json](experiments/ces_mps/env-spec.json)，实验安排见 [PROTOCOL.md](experiments/ces_mps/PROTOCOL.md)。
+
+- `experiments/ces_mps/acquire_ces.py`：获取 2020–2026 年月度数据，优先复用已有年度文件；背景文件从 `data/raw/` 读取。
+- `experiments/ces_mps/acquire_macro.py`：获取宏观经济因子。
+- `experiments/ces_mps/download_models.py`：获取本地模型。
 
 Data source: ECB Consumer Expectations Survey.
