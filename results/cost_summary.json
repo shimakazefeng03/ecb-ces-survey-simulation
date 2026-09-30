@@ -1,0 +1,16 @@
+{
+  "returned_response_calls": 4925,
+  "token_usage": {
+    "prompt_cache_hit_tokens": 609664,
+    "prompt_cache_miss_tokens": 2432504,
+    "completion_tokens": 303425
+  },
+  "group_total_tokens": {
+    "deepseek_raw": 2780672,
+    "deepseek_invalid_wording_excluded": 522940,
+    "reviews": 41981
+  },
+  "estimated_usd_offpeak": 0.5487595919999999,
+  "estimated_usd_peak": 1.0975191839999998,
+  "not_included": "Unreturned/timeout requests may have incurred charges; this is not a billing statement."
+}

@@ -1,0 +1,15 @@
+{
+  "base": "/opt/anaconda3/envs/python/bin/python 3.13, isolated project venv with inherited read-only base packages",
+  "provider": "local-mps",
+  "venv": "/Users/fengyang/Desktop/4742/.venv-mps",
+  "pip_phases": [["transformers==5.17.0"]],
+  "required_base_packages": {"torch": "2.9.1", "peft": "0.20.0", "accelerate": "1.14.0"},
+  "hardware": {"chip": "Apple M3 Pro", "unified_memory_gib": 18},
+  "env": {"PYTORCH_ENABLE_MPS_FALLBACK": "0", "TOKENIZERS_PARALLELISM": "false"},
+  "dtype": "bfloat16",
+  "attention": "eager",
+  "models": ["Qwen/Qwen3.5-4B", "Qwen/Qwen3-4B", "HuggingFaceTB/SmolLM3-3B"],
+  "execution": "One accelerator workload at a time. No cloud/API inference. CPU for data preparation and classical models.",
+  "budget": {"token_limit": null, "cost_limit": null, "quality_gate": null},
+  "smoke": {"command": "PYTORCH_ENABLE_MPS_FALLBACK=0 TOKENIZERS_PARALLELISM=false .venv-mps/bin/python experiments/ces_mps/env_witness.py", "expect": "MODEL_WITNESS mps finite_loss_nonzero_gradient"}
+}

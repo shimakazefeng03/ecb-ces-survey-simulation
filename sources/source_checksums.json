@@ -1,0 +1,47 @@
+[
+  {
+    "path": "data/raw/ecb.CES_data_2025_monthly.en.csv",
+    "bytes": 89335258,
+    "sha256": "cbf39cb711eab24fa44a6d023b477753449c22d50e43e5cf515ff79eac96bc66"
+  },
+  {
+    "path": "data/raw/ecb.CES_data_2026_monthly.en.csv",
+    "bytes": 42181644,
+    "sha256": "9204b639d6d50dcf4316ee267ad555a846dde40e4491546a8156b842ed4bbb54"
+  },
+  {
+    "path": "data/raw/ecb.CES_data_background.en.csv",
+    "bytes": 9939080,
+    "sha256": "5a2743dcd3383b716a17f85e9ed65b8819c8416e621ba0e1638e4e885162aab4"
+  },
+  {
+    "path": "sources/ecb/ecb.CES_microdata_guide.en.pdf",
+    "bytes": 1993788,
+    "sha256": "c4bbea4a5480552845cfcef706ba012bb0a6e48e7135984829ae1547af5b2c9f"
+  },
+  {
+    "path": "sources/ecb/CES_methodological_guide.en.pdf",
+    "bytes": 406006,
+    "sha256": "1645dab1270af7638e5db17b5a2c297fea71342efec2777a55d24c241a5a7940"
+  },
+  {
+    "path": "sources/papers/park2024.pdf",
+    "bytes": 3563209,
+    "sha256": "1ee1f32c2ba92eae7a91f28d204b9041a0f1cfb9ffc7201b3c52ac464f4e1fe2"
+  },
+  {
+    "path": "sources/papers/cao2025.pdf",
+    "bytes": 5339570,
+    "sha256": "1b46fdaed4aee45f60243e61dcfc1fb4bb8497a76f98b7e7ac74f48c0503a9f1"
+  },
+  {
+    "path": "sources/papers/krsteski2026.pdf",
+    "bytes": 590562,
+    "sha256": "4db2eff09adaf6076b7e91b7932c53aa6ee9e9fe617061f2f7e71d82570e7144"
+  },
+  {
+    "path": "sources/papers/persona2026.pdf",
+    "bytes": 6258111,
+    "sha256": "6db90ff8200cacfaf562303167130e8ced8f637cfefb6d1dbd4532eb3c68cb0f"
+  }
+]

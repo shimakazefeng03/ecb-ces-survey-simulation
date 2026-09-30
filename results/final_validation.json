@@ -1,0 +1,17 @@
+{
+  "lag_timing": "passed",
+  "unseen_training_ids_disjoint": "passed",
+  "paired_sample_keys": "passed",
+  "six_prompt_arms_complete": "passed",
+  "forbidden_wording_archive_excluded": "passed_by_explicit_input_path",
+  "note": "Retrospective release and pretrained contamination remain limitations, not testable invariants.",
+  "qwen_selected_outputs_complete": "passed",
+  "qwen_probability_simplex": "passed",
+  "qwen_cache_equivalence_actual_max_error": 0.0,
+  "python_syntax": "passed",
+  "pdf_pages": 12,
+  "pdf_text_page_bounds": "passed",
+  "pdf_text_chars": 16467,
+  "pdf_visual_review": "All 12 final pages inspected in contact sheets; detailed inspection of dense methods and literature pages; no clipping, missing Chinese glyphs or overlapping tables observed.",
+  "csv_reconstruction": "Raw CSV contents/dtypes/order match original initial panel after discarding index; subsequent merge/sort resets it."
+}

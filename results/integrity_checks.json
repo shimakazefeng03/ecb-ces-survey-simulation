@@ -1,0 +1,8 @@
+{
+  "lag_timing": "passed",
+  "unseen_training_ids_disjoint": "passed",
+  "paired_sample_keys": "passed",
+  "six_prompt_arms_complete": "passed",
+  "forbidden_wording_archive_excluded": "passed_by_explicit_input_path",
+  "note": "Retrospective release and pretrained contamination remain limitations, not testable invariants."
+}
