@@ -1,0 +1,54 @@
+{
+  "model": "claude-haiku-5-5",
+  "effort": "low",
+  "windows": [
+    0,
+    3,
+    6,
+    12
+  ],
+  "main_subset_min_prior": 12,
+  "countries": [
+    "BE",
+    "DE",
+    "ES",
+    "FR",
+    "IT",
+    "NL"
+  ],
+  "target": "c3110",
+  "persona_fields": {
+    "gender": "gender_released",
+    "age group": "age_group",
+    "education": "education_group",
+    "household net income quintile (1 = lowest 20% in country, 5 = highest)": "income_quintile",
+    "household size": "household_size_topcoded",
+    "children aged 0-17 in household": "children_0_17_topcoded",
+    "lives with partner": "partner_in_household"
+  },
+  "seed": 42,
+  "static_file": "six_country_static_persona_baseline_2020_2026.csv",
+  "target_file": "six_country_c3110_labels_evaluation_only_2020_2026.csv",
+  "history_file": "six_country_history_up_to12_2020_2026.csv",
+  "system_prompt": "You simulate how a specific respondent of the ECB Consumer Expectations Survey answers. Predict what this particular person would answer, not what is economically correct. Give calibrated probabilities that reflect your real uncertainty about this person.",
+  "macro_block": false,
+  "tokens_in_out_per_window": {
+    "w0": [
+      759171,
+      58800
+    ],
+    "w3": [
+      841740,
+      58745
+    ],
+    "w6": [
+      888814,
+      58640
+    ],
+    "w12": [
+      956786,
+      58660
+    ]
+  },
+  "run": "20261028_0130"
+}
