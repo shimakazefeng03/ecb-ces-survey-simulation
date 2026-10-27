@@ -13,7 +13,7 @@ are scored on the same rows, so any improvement can be measured against this bas
 | **Model run** | Claude Haiku (`claude-haiku-5-5`), effort `low` |
 | **Notebook** | `six_country_static_baseline.ipynb` (Google Colab) |
 
-## What I did
+## What was done
 
 1. **Loaded and checked the data.**
    - The static persona file has 1,089,680 respondent-waves from 114,321 respondents.
